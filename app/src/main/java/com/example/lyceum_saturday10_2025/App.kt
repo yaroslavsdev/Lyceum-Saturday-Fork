@@ -3,7 +3,10 @@ package com.example.lyceum_saturday10_2025
 import android.app.Application
 import androidx.room.Room
 import com.example.lyceum_saturday10_2025.db.GoodsDatabase
+import dagger.hilt.android.HiltAndroidApp
 
+
+@HiltAndroidApp
 class App: Application() {
     override fun onCreate() {
         super.onCreate()

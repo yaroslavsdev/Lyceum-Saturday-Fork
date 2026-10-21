@@ -5,11 +5,14 @@ import androidx.lifecycle.viewModelScope
 import com.example.lyceum_saturday10_2025.features.github.data.GithubRepository
 import com.example.lyceum_saturday10_2025.features.github.presentation.model.GithubUiState
 import com.example.lyceum_saturday10_2025.features.github.presentation.model.GithubUserUi
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class GithubViewModel : ViewModel() {
+@HiltViewModel
+class GithubViewModel @Inject constructor(): ViewModel() {
 
     val repository = GithubRepository()
     private val _state = MutableStateFlow(GithubUiState())
